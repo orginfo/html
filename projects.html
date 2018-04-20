@@ -1,0 +1,26 @@
+<html><head />
+<body>
+	<h1>Code: {{.Code}}</h1>
+	<h1>Message: {{.Message}}</h1>
+	<h1>ID: {{.ID}}</h1>
+	<table style="width:100%">
+		<tr>
+			<th>Номер договора</th>
+			<th>ФИО</th>
+			<th>Адрес объекта</th>
+			<th>Телефон</th>
+			<th>Дата создания</th>
+			<th>Комментарий</th>
+		</tr>
+	    {{range .Result}}
+	    <tr>
+			<td>{{.Nr}}</td>
+			<td>{{.Client.Name}}</td>
+			<td>{{.Address}}</td>
+			<td>{{.Client.Phone}}</td>
+			<td>{{.ContractDate}}</td>
+			<td>{{.Comment}}</td>
+		</tr>
+	    {{end}}
+	</table>
+</body></html>
